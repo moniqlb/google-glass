@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: "FonteLogo";
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    background-color: #dddddd;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+a{
+    color: #606060;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1255px;
+    top: 70px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #505050;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 0px;
+    /*espaço interno*/
+    margin-bottom: 0px;
+    /*espaço externo bottom=baixo*/
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    /*largura, cor e linha continua ou pontilhada, etc*/
+    height: 150px;
+    background-image: url(../_imagens/glass-logo-peq.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 90px;
+}
+
+div#interface {
+    width: 900px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /*deslocamento lateral, verticaç, espalhamento sombra e cor*/
+    padding: 15px;
+    /*espaco do da borda e o texto*/
+}
+
+h1 {
+    text-align: left;
+}
+
+
+/*Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+    /*fazendo definições a tag figure com class foto-legenda*/
+    position: relative;
+    /*posição relativa ao codigo html*/
+    border: 8px solid white;
+    /* bora de 8px branca*/
+    box-shadow: 1px 1px 4px black;
+    /*sombra preta*/
+}
+
+figure.foto-legenda img {
+    /*fazendo definições a tag img que está dentro de uma figure com classh foto-legenda*/
+    width: 100%;
+    height: 100%;
+    /*colocando a img dentro da borda criada para a figure*/
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    /*opacidade zero para aparecer apenas com efeitos hover*/
+    position: absolute;
+    /*posição absoluta a img*/
+    top: 0px;
+    /*posicao na img*/
+    background-color: rgba(0, 0, 0, 0.4);
+    /*preto com opacidade de 40% pra ficar transparente*/
+    color: white;
+    /*cor da letra branca*/
+    width: 100%;
+    /*width e height: definindo que o fundo da legenda vai ocupar toda a img*/
+    height: 100%;
+    padding: 10px;
+    /*espaçamento entre a borda e a legenda*/
+    box-sizing: border-box;
+    /*definidno q o fundo transparente e do tamanho da img*/
+    transition: opacity 1s;
+    /*tempo de transiçao do efeito hover*/
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
+
+
+/*efeito de aparecer a legenda*/
+
+
+/*formatação menu flutuante*/
+
+nav#menu {
+    display: block;
+    /*blocos flutuam pela tela*/
+}
+
+nav#menu ul {
+    list-style: none;
+    /*tirando o marcador*/
+    text-transform: uppercase;
+    /*letra do menu em maiusculo*/
+    position: absolute;
+    top: -18px;
+    left: 700px;
+    
+}
+
+nav#menu li {
+    /*configuração dos itens*/
+    display: inline-block;
+    /*colocando lado a lado*/
+    background-color: #dddddd;
+    /*definindo cor de fundo*/
+    padding: 8px;
+    /*definindo tamanho da caixinha*/
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+    /*mudando a caixinha pra cor cinza*/
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    /*cor da letra preta no menu e tirando o sublinhado*/
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: white;
+}
+
+section#corpo {
+    display: block;
+    width: 520px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabeca-artigo h1{
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabeca-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+    
+}
+
+header#cabeca-artigo h3{
+    font-size: 10pt;
+    color: #606060;
+}
+
+.direita{
+    text-align: right;
+}
+
+table#tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    vertical-align: middle;   
+}
+
+table#tabelaspec td.ce{
+    color: #ffffff;
+    background-color: #606060;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+    text-align: center;
+    font-weight: bold;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 17pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 10pt;
+    padding-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 320px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 5px;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+    
+}
+
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+video#index-esq {
+    width: 520px;
+}
+
+video#video-aside {
+    width: 320px;
+}
